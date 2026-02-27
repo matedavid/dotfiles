@@ -107,6 +107,15 @@ return {
         end,
     },
 
+    -- conform formatter
+    {
+        'stevearc/conform.nvim',
+        config = function()
+            require("config.conform")
+        end,
+        opts = {},
+    },
+
     -- lazydev
     {
     "folke/lazydev.nvim",
