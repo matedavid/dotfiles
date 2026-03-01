@@ -10,11 +10,16 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0 -- set to 0 to default to tabstop value
 
+vim.opt.incsearch = true
+
 vim.opt.termguicolors = true
+vim.o.winborder = "rounded"
+
+vim.opt.signcolumn = "yes"
 
 -- Set up diagnostics
 
 vim.diagnostic.config({
-    virtual_text = true,
-    virtual_lines = false,
+	virtual_text = true,
+	virtual_lines = false,
 })
