@@ -34,15 +34,15 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set({ "n", "v" }, "<Leader>ca", vim.lsp.buf.code_action, opts)
 
 	-- Formatting
-	vim.keymap.set("n", "<Leader>f", function()
+	vim.keymap.set("n", "<Leader>fc", function()
 		vim.lsp.buf.format({ async = true })
 	end, opts)
 end
 
 -- clangd
 vim.lsp.config("clangd", {
-    on_attach = on_attach,
-    cmd = { "clangd", "--header-insertion=never" },
+	on_attach = on_attach,
+	cmd = { "clangd", "--header-insertion=never" },
 })
 vim.lsp.enable("clangd")
 

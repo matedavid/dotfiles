@@ -126,15 +126,10 @@ return {
 		},
 	},
 
-	-- colorscheme
 	{
-		"RRethy/base16-nvim",
+		"RRethy/nvim-base16",
 		config = function()
-			require("base16-colorscheme").with_config({
-				telescope = true,
-			})
-
-			vim.cmd("colorscheme base16-gruvbox-dark-pale")
+			vim.cmd("colorscheme base16-gruvbox-material-dark-hard")
 		end,
 	},
 }
