@@ -126,10 +126,42 @@ return {
 		},
 	},
 
+	-- colorscheme
 	{
 		"RRethy/nvim-base16",
 		config = function()
 			vim.cmd("colorscheme base16-gruvbox-material-dark-hard")
+		end,
+	},
+
+	-- gitsigns
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup({
+				signs = {
+					add = { text = "│" },
+					change = { text = "│" },
+					delete = { text = "_" },
+					topdelete = { text = "‾" },
+					changedelete = { text = "~" },
+				},
+				current_line_blame = true, -- inline git blame
+			})
+		end,
+	},
+
+	-- transparency
+	{
+		"xiyaowong/transparent.nvim",
+		lazy = false,
+		config = function()
+			require("transparent").setup({
+				extra_groups = {
+					"NeoTreeNormal",
+					"NeoTreeNormalNC",
+				},
+			})
 		end,
 	},
 }
