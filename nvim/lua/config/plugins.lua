@@ -128,9 +128,23 @@ return {
 
 	-- colorscheme
 	{
-		"RRethy/nvim-base16",
+		"morhetz/gruvbox",
+		lazy = false,
+		priority = 1000,
 		config = function()
-			vim.cmd("colorscheme base16-gruvbox-material-dark-hard")
+			-- enable true color (important)
+			vim.o.termguicolors = true
+
+			-- match classic gruvbox settings
+			vim.g.gruvbox_contrast_dark = "hard"
+			vim.g.gruvbox_italic = 0
+			vim.g.gruvbox_bold = 0
+
+			-- optional: match typical old configs
+			vim.g.gruvbox_underline = 1
+			vim.g.gruvbox_undercurl = 1
+
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 
@@ -152,6 +166,7 @@ return {
 	},
 
 	-- transparency
+	--[[
 	{
 		"xiyaowong/transparent.nvim",
 		lazy = false,
@@ -164,4 +179,5 @@ return {
 			})
 		end,
 	},
+    ]]
 }
